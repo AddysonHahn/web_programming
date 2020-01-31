@@ -1,18 +1,44 @@
-var milesperyear = prompt("Estimated number of miles per year?");
-var currentcost = prompt("Current cost of a gallon of gas in your area?");
-function Function1(milesperyear, currentcost, mpg, element) {
-  var answer = milesperyear / (currentcost * mpg);
-  document.querySelector(element).innerHTML =
-    "To drive a car with a MPG rating of " +
-    mpg +
-    " for " +
-    milesperyear +
-    " miles at $" +
-    currentcost +
-    " per gallon would cost " +
-    answer;
+var name = prompt("What is your name?");
+function function1(word){
+  return word.charAt(0).toLowerCase();
 }
-Function1(milesperyear, currentcost, 12, ".one");
-Function1(milesperyear, currentcost, 17, ".two");
-Function1(milesperyear, currentcost, 26, ".three");
-Function1(milesperyear, currentcost, 29, ".four");
+function IndexFinder(letter) {
+  var alphabet = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z"
+  ];
+  
+   
+  
+  for(var i=0; i<alphabet.length; i++) {
+    if (letter==alphabet[i]){
+      document.querySelector(".index").innerHTML=i;
+    }
+  }
+}
+
+IndexFinder(function1(name));
