@@ -1,44 +1,11 @@
-var name = prompt("What is your name?");
-function function1(word){
-  return word.charAt(0).toLowerCase();
-}
-function IndexFinder(letter) {
-  var alphabet = [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z"
-  ];
-  
-   
-  
-  for(var i=0; i<alphabet.length; i++) {
-    if (letter==alphabet[i]){
-      document.querySelector(".index").innerHTML=i;
-    }
+var animals = ["dog", "fish", "cat", "shark", "cat", "dog"];
+var i;
+for (var i = 0; i < animals.length; i++) {
+  if (animals[i] == "dog") {
+    document.querySelector(".loopline" + i).innerHTML = "borf borf";
+  } else if (animals[i] == "cat") {
+    document.querySelector(".loopline" + i).innerHTML = "I am a cat.";
+  } else {
+    document.querySelector(".loopline" + i).innerHTML = "I am an animal.";
   }
 }
-
-IndexFinder(function1(name));
